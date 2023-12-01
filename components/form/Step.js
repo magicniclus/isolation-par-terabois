@@ -6,15 +6,19 @@ import SituationPersonnelle from "./step/SituationPersonnelle";
 import SituationProfessionnelle from "./step/SituationProfessionnelle";
 import RevenusFiscal from "./step/RevenusFiscal";
 import NbrPartFoyer from "./step/NbrPartFoyer";
-import Secteur from "./step/Secteur";
+import Prestations from "./step/Prestations";
 import Projet from "./step/Projet";
+import Surface from "./step/Surface";
 
 const Step = () => {
   const [error, setError] = useState(null);
   const step = useSelector((state) => state?.stepInProgress);
 
   const type = useSelector((state) => state?.clientInfomation?.type);
-  const secteur = useSelector((state) => state?.clientInfomation?.secteur);
+  const combles = useSelector((state) => state?.clientInfomation?.combles);
+  const rampants = useSelector((state) => state?.clientInfomation?.rampants);
+  const iti = useSelector((state) => state?.clientInfomation?.iti);
+  const surface = useSelector((state) => state?.clientInfomation?.surface);
   const situationPersonnelle = useSelector(
     (state) => state?.clientInfomation?.situationPersonnelle
   );
@@ -41,13 +45,13 @@ const Step = () => {
   const handleComponent = () => {
     switch (step) {
       case 2:
-        return <Secteur />;
+        return <Prestations />;
 
       case 3:
-        return <SituationPersonnelle />;
+        return <Surface />;
 
       case 4:
-        return <SituationProfessionnelle />;
+        return <SituationPersonnelle />;
 
       case 5:
         return <RevenusFiscal />;
@@ -70,13 +74,13 @@ const Step = () => {
   const isButtonDisabled = () => {
     switch (step) {
       case 2:
-        return !secteur;
+        return !(combles || rampants || iti);
 
       case 3:
-        return !situationPersonnelle;
+        return !surface;
 
       case 4:
-        return !situationProfessionnelle;
+        return !situationPersonnelle;
 
       case 5:
         return !revenusFiscal;
