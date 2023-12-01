@@ -5,14 +5,14 @@ const CTABanner = () => {
     <div className="relative">
       <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:justify-between lg:px-8">
         <h2 className="text-xl tracking-tight text-gray-700 sm:text-2xl mr-10">
-          Vous souhaitez estimer votre éligibilité au PTZ ?
+          Vous souhaitez estimer votre éligibilité aux aides de l'état ?
           <br />
           C'est gratuit et cela ne prend que 2 minutes !
         </h2>
         <div className="mt-10 flex items-center gap-x-6 lg:mt-0 lg:flex-shrink-0">
           <a
             href="#estimation"
-            className="text-white py-2 px-8 rounded-lg transition ease-in-out duration-100 bg-blue-500"
+            className="text-white py-2 px-8 rounded-lg transition ease-in-out duration-100 bg-blue-500 hover:shadow-lg"
           >
             Estimer
           </a>
