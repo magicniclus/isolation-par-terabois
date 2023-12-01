@@ -25,24 +25,29 @@ const EtapeEstimation = () => {
         select: stepInProgress === 3 ? true : false,
       },
       {
-        name: "Situation personnelle",
+        name: "Secteur",
         done: stepInProgress > 4 ? true : false,
         select: stepInProgress === 4 ? true : false,
       },
       {
-        name: "Revenus fiscale de référence",
+        name: "Situation personnelle",
         done: stepInProgress > 5 ? true : false,
         select: stepInProgress === 5 ? true : false,
       },
       {
-        name: "Foyer fiscal",
+        name: "Revenus fiscale de référence",
         done: stepInProgress > 6 ? true : false,
         select: stepInProgress === 6 ? true : false,
+      },
+      {
+        name: "Foyer fiscal",
+        done: stepInProgress > 7 ? true : false,
+        select: stepInProgress === 7 ? true : false,
       },
 
       {
         name: "Objectif",
-        done: stepInProgress > 7 ? true : false,
+        done: stepInProgress > 8 ? true : false,
         select: stepInProgress === 14 ? true : false,
       },
     ]);
