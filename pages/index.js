@@ -29,8 +29,8 @@ const googleCards = [
 export default function Home() {
   return (
     <Basic
-      title="Simulation Prêt à Taux Zéro - Info PTZ | Estimez Votre Éligibilité Facilement"
-      metaDescription="Découvrez rapidement votre éligibilité au prêt à taux zéro avec Info PTZ. Notre simulateur facile à utiliser vous aide à estimer votre prêt pour un financement immobilier avantageux. Commencez dès maintenant !"
+      title="Simulation aux aides de l'état pou votre projet d'isolation "
+      metaDescription="Découvrez rapidement votre éligibilité au aides de l'état. Notre simulateur facile à utiliser vous aide à estimer votre prêt pour un projet d'isolation. Commencez dès maintenant !"
     >
       <Hero />
       {/* <CertificationsBanner /> */}
