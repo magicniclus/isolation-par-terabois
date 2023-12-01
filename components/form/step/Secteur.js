@@ -18,7 +18,7 @@ const Secteur = () => {
         className="text-2xl font-light lg:my-0 my-5"
         style={{ color: "#3b82f6" }}
       >
-        Votre code postal
+        Votre code postal :
       </h2>
       <div className="flex flex-col">
         <InputNumber onChange={setSelectedType} type="CP" />
