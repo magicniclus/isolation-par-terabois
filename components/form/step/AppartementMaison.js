@@ -35,12 +35,12 @@ const AppartementMaison = () => {
         className="text-2xl font-light lg:my-0 mt-5"
         style={{ color: "#3b82f6" }}
       >
-        Quel type de bien souhaitez-vous acquerir ?
+        Quel type de bien souhaitez-vous isoler ?
       </h2>
       <form className="flex flex-col items-start mt-10" onSubmit={handleSubmit}>
         <div className="flex flex-wrap">
           {["Maison", "Appartement"].map((type, idx) => (
-            <div className={"mt-5"}>
+            <div key={idx} className={"mt-5"}>
               <CardsWithBigImg
                 key={type}
                 type={type}
