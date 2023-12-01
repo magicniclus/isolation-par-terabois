@@ -25,12 +25,11 @@ const FormulaireFinal = () => {
   const situationPersonnelle = useSelector(
     (state) => state.clientInfomation.situationPersonnelle
   );
-  const situationProfessionnelle = useSelector(
-    (state) => state.clientInfomation.situationProfessionnelle
-  );
-  const revenusFiscal = useSelector(
-    (state) => state.clientInfomation.revenusFiscal
-  );
+  const revenus = useSelector((state) => state.clientInfomation.revenusFiscal);
+  const combles = useSelector((state) => state.clientInfomation.combles);
+  const rampants = useSelector((state) => state.clientInfomation.rampants);
+  const iti = useSelector((state) => state.clientInfomation.iti);
+  const surface = useSelector((state) => state.clientInfomation.surface);
   const nbrDePart = useSelector((state) => state.clientInfomation.nbrDePart);
   const projet = useSelector((state) => state.clientInfomation.projet);
 
@@ -93,13 +92,16 @@ const FormulaireFinal = () => {
         lastName,
         email,
         phone,
-        projet,
-        situationProfessionnelle,
-        situationPersonnelle,
-        revenusFiscal,
-        nbrDePart,
         type,
-        secteur
+        combles,
+        rampants,
+        iti,
+        surface,
+        situationPersonnelle,
+        revenus, // Ajouter cet argument
+        secteur,
+        nbrDePart,
+        projet
       )
         .then((res) => {
           router.push(`/estimation/resultat`);
