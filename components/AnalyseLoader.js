@@ -82,7 +82,7 @@ const AnalyseLoader = () => {
               opacity: showCheckIconTwo ? "1" : "0.8",
             }}
           >
-            Calcul prêt à taux zéro
+            Calcul de votre éligibilité
           </p>
         </div>
         <div className="flex items-center mt-3">
@@ -97,7 +97,7 @@ const AnalyseLoader = () => {
               opacity: showCheckIconThree ? "1" : "0.8",
             }}
           >
-            Calcul TVA réduite
+            Validation des aides
           </p>
         </div>
       </div>
