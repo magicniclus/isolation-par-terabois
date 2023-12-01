@@ -15,17 +15,17 @@ const EtapeEstimation = () => {
         select: stepInProgress === 1 ? true : false,
       },
       {
-        name: "Secteur",
+        name: "Type de prestation",
         done: stepInProgress > 2 ? true : false,
         select: stepInProgress === 2 ? true : false,
       },
       {
-        name: "Situation personnelle",
+        name: "Surface",
         done: stepInProgress > 3 ? true : false,
         select: stepInProgress === 3 ? true : false,
       },
       {
-        name: "Situation professionnelle",
+        name: "Situation personnelle",
         done: stepInProgress > 4 ? true : false,
         select: stepInProgress === 4 ? true : false,
       },
