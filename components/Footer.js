@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import CertificationsBanner from "./CertificationsBanner";
 
 const isValidEmail = (email) => {
   const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
@@ -41,10 +42,17 @@ export default function Footer() {
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-20 sm:pt-24 lg:px-8 lg:pt-32">
-        <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 md:flex md:items-center md:justify-between lg:mt-24">
+      <div className="mx-auto max-w-7xl px-6 pb-8 pt-10 lg:px-8">
+        <div className="flex w-full justify-between items-center">
+          <a href="/" className="">
+            <span className="sr-only">Avenue-immo</span>
+            <img className="w-auto h-14" src="/logo.png" alt="avenue-immo" />
+          </a>
+          <CertificationsBanner />
+        </div>
+        <div className="mt-10 border-t border-white/10 pt-8 md:flex md:items-center md:justify-between">
           <p className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0">
-            &copy; 2023 ptz-info.org, Inc. Tous droit réservé.
+            &copy; 2023 isolation-par-terabois.fr, Inc. Tous droit réservé.
           </p>
           <a
             className="mt-8 text-xs leading-5 text-gray-400 md:order-1 md:mt-0"
