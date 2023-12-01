@@ -32,9 +32,9 @@ const Hero = () => {
   return (
     <section
       id="estimation"
-      className="flex w-full justify-between items-center bg-gray-50 rounded-md mt-10 lg:mb-10 lg:flex-row flex-col"
+      className="flex w-full justify-between items-center overflow-hidden bg-gray-50 rounded-md lg:mb-10 lg:py-5 lg:flex-row flex-col lg:mt-10"
     >
-      <div className="w-full lg:w-5/12 flex flex-col justify-center lg:min-h-[500px] lg:mb-0 mb-10 relative lg:bg-gray-50 bg-white px-6 lg:px-10">
+      <div className="w-full lg:w-5/12 flex flex-col justify-center lg:min-h-[500px] lg:mb-0 mb-10 relative lg:bg-gray-50 bg-white px-6 lg:px-10 lg:mt-0">
         <div>
           <h1 className="lg:text-4xl text-2xl lg:w-11/12 mt-10 lg:mt-3 text-gray-700">
             Estimez vos aides pour
