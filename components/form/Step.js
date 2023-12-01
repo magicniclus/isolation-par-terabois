@@ -1,29 +1,25 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import AppartementMaison from "./step/AppartementMaison";
 import { useRouter } from "next/router";
 import SituationPersonnelle from "./step/SituationPersonnelle";
-import SituationProfessionnelle from "./step/SituationProfessionnelle";
 import RevenusFiscal from "./step/RevenusFiscal";
 import NbrPartFoyer from "./step/NbrPartFoyer";
 import Prestations from "./step/Prestations";
 import Projet from "./step/Projet";
 import Surface from "./step/Surface";
+import Secteur from "./step/Secteur";
 
 const Step = () => {
   const [error, setError] = useState(null);
   const step = useSelector((state) => state?.stepInProgress);
 
-  const type = useSelector((state) => state?.clientInfomation?.type);
   const combles = useSelector((state) => state?.clientInfomation?.combles);
   const rampants = useSelector((state) => state?.clientInfomation?.rampants);
   const iti = useSelector((state) => state?.clientInfomation?.iti);
   const surface = useSelector((state) => state?.clientInfomation?.surface);
+  const secteur = useSelector((state) => state?.clientInfomation?.secteur);
   const situationPersonnelle = useSelector(
     (state) => state?.clientInfomation?.situationPersonnelle
-  );
-  const situationProfessionnelle = useSelector(
-    (state) => state?.clientInfomation?.situationProfessionnelle
   );
   const revenusFiscal = useSelector(
     (state) => state?.clientInfomation?.revenusFiscal
@@ -35,7 +31,6 @@ const Step = () => {
 
   const router = useRouter();
   const pathSegments = router.asPath.split("/");
-  const currentSlug = pathSegments[1];
 
   const handleRoute = (e) => {
     e.preventDefault();
@@ -51,15 +46,18 @@ const Step = () => {
         return <Surface />;
 
       case 4:
-        return <SituationPersonnelle />;
+        return <Secteur />;
 
       case 5:
-        return <RevenusFiscal />;
+        return <SituationPersonnelle />;
 
       case 6:
-        return <NbrPartFoyer />;
+        return <RevenusFiscal />;
 
       case 7:
+        return <NbrPartFoyer />;
+
+      case 8:
         return <Projet />;
 
       default:
@@ -80,15 +78,18 @@ const Step = () => {
         return !surface;
 
       case 4:
-        return !situationPersonnelle;
+        return !secteur;
 
       case 5:
-        return !revenusFiscal;
+        return !situationPersonnelle;
 
       case 6:
-        return !nbrDePart;
+        return !revenusFiscal;
 
       case 7:
+        return !nbrDePart;
+
+      case 8:
         return !projet;
 
       default:
@@ -112,9 +113,9 @@ const Step = () => {
             backgroundColor: "#3b82f6",
             opacity: isButtonDisabled() ? 0.6 : 1,
           }}
-          onClick={(e) => (step === 7 ? handleRoute(e) : handleStep(e))}
+          onClick={(e) => (step === 8 ? handleRoute(e) : handleStep(e))}
         >
-          {step === 7 ? "Voir l'estimation" : "Suivant"}
+          {step === 8 ? "Voir l'estimation" : "Suivant"}
         </button>
         {error ? (
           <p className="text-red-300 text-xs font-light lg:w-3/5 text-start ml-2">
