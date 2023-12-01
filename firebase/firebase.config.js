@@ -1,28 +1,24 @@
 import { initializeApp, getApps } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getDatabase } from "firebase/database";
 
+// Your web app's Firebase configuration
 const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: "maprimerenov-58fdf.firebaseapp.com",
   databaseURL:
-    "https://ptz-info-default-rtdb.europe-west1.firebasedatabase.app",
-  apiKey: "AIzaSyBByJMloYhP3xh_t4fmUMv6cxIYgrXBJ-Y",
-  authDomain: "ptz-info.firebaseapp.com",
-  projectId: "ptz-info",
-  storageBucket: "ptz-info.appspot.com",
-  messagingSenderId: "403642933392",
-  appId: "1:403642933392:web:e290606a13005110b57815",
+    "https://maprimerenov-58fdf-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "maprimerenov-58fdf",
+  storageBucket: "maprimerenov-58fdf.appspot.com",
+  messagingSenderId: "855231284792",
+  appId: "1:855231284792:web:e491151c0617175c01c8cd",
 };
 
-// Vérifier si Firebase a déjà été initialisé
+// Initialize Firebase
 let app;
+
 if (!getApps().length) {
   app = initializeApp(firebaseConfig);
 } else {
   app = getApps()[0];
 }
 
-// Get a reference to the auth service
-const auth = getAuth();
-const database = getDatabase(app);
-
-export { app, auth, database };
+export default app;
