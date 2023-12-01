@@ -43,7 +43,7 @@ export default function Footer() {
         Footer
       </h2>
       <div className="mx-auto max-w-7xl px-6 pb-8 pt-10 lg:px-8">
-        <div className="flex w-full justify-between items-center">
+        <div className="flex w-full justify-between items-center sm:flex-row flex-col">
           <a href="/" className="">
             <span className="sr-only">Avenue-immo</span>
             <img className="w-auto h-14" src="/logo.png" alt="avenue-immo" />
