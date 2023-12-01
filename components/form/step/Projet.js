@@ -3,7 +3,11 @@ import { useDispatch } from "react-redux";
 import Select from "../selected/Select";
 
 const Projet = () => {
-  const options = ["Je recherche un bien", "J'ai déjà acquis un bien", "Autre"];
+  const options = [
+    "Je recherche un artisan RGE",
+    "J'ai déjà effectué mes travaux",
+    "Autre",
+  ];
 
   const dispatch = useDispatch();
   const [selectedType, setSelectedType] = useState(null);
