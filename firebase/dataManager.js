@@ -1,4 +1,4 @@
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, ref, push, set } from "firebase/database";
 import { database } from "./firebase.config";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
@@ -8,11 +8,14 @@ export function writeUserData(
   prenom,
   email,
   telephone,
-  secteur,
   type,
-  situationPerso,
-  situationPro,
+  combles,
+  rampants,
+  iti,
+  surface,
+  situationPersonnelle,
   revenus,
+  secteur,
   nbrDePart,
   projet
 ) {
@@ -29,85 +32,30 @@ export function writeUserData(
     second: "2-digit",
     hour12: false,
   });
+  const database = getDatabase();
+  const contactIsolationRef = ref(database, "contactIsolation");
+
   return new Promise((resolve, reject) => {
-    set(ref(database, `contact/${uuidv4()}`), {
+    const newContactRef = push(contactIsolationRef);
+    set(newContactRef, {
       nom,
       prenom,
       email,
       telephone,
-      projet,
-      situationPro,
-      situationPerso,
-      revenus,
-      nbrDePart,
       type,
+      combles,
+      rampants,
+      iti,
+      surface,
+      situationPersonnelle,
+      revenus,
       secteur,
+      nbrDePart,
+      projet,
       dateEtHeureFrancais,
     })
       .then(() => {
-        resolve("success");
-      })
-      .catch((error) => {
-        reject(error);
-      });
-  });
-}
-
-export function writeCRMUserData(
-  nom,
-  prenom,
-  email,
-  telephone,
-  civilite,
-  secteur,
-  type,
-  situationPersonnelle,
-  situationProfessionnelle,
-  revenusFiscal,
-  nbrDePart
-) {
-  const dateEtHeure = new Date().toISOString();
-
-  // Structure des données pour l'API
-  const contactData = {
-    nom: nom,
-    prenom: prenom,
-    email: email,
-    telephone_mobile: telephone,
-    civilite: civilite,
-    code_postal: secteur === "gironde" ? "33000" : "17000",
-    id_provenance: 22,
-    demande: {
-      genres_lot: [
-        {
-          genre: type,
-        },
-      ],
-      cible: "RP",
-      date: dateEtHeure,
-      id_programme: 33,
-      message:
-        "Situation professionnelle : " +
-        situationProfessionnelle +
-        ", Situation personnelle : " +
-        situationPersonnelle +
-        ", Revenus fiscaux : " +
-        revenusFiscal +
-        ", Nombre de part : " +
-        nbrDePart,
-    },
-  };
-
-  return new Promise((resolve, reject) => {
-    axios
-      .post("https://api.leizee.com/contacts", contactData, {
-        auth: {
-          username: "signaturepromotion-castera",
-          password: "o53ifo07ox56511qv1m2473jijcg8d",
-        },
-      })
-      .then(() => {
-        resolve("success");
+        resolve(newContactRef.key); // Retourne l'ID généré par Firebase
       })
       .catch((error) => {
         reject(error);
