@@ -5,24 +5,24 @@ const index = () => {
   return (
     <Basic>
       <h1 className="flex flex-col mx-auto py-10 text-center lg:text-5xl text-2xl lg:w-11/12 mt-10 lg:mt-3 text-gray-700">
-        PTZ-info.org <br />
+        isolation-par-terabois.fr <br />
         Mentions légales
       </h1>
       <div className="text-gray-700">
         <p className="mt-2">
-          Le site ptz-info.org est la propriété de l’entreprise Signature
-          Promotion, gérée par Monsieur Pascal Passerieux.
+          Le site isolation-par-terabois.fr est la propriété de l’entreprise
+          Signature Promotion, gérée par Monsieur Pascal Passerieux.
         </p>
 
         <h3 className="text-lg mt-3 font-semibold">Éditeur du site</h3>
         <p className="mt-2">
-          Signature Promotion
+          Terabois
           <br />
-          25 rue Sainte-Philomène
+          36 avenue francois mitterrand
           <br />
-          33300 Bordeaux
+          33270 Floirac
           <br />
-          Tel : 05 56 36 70 38
+          Tel : 06 49 23 13 80
         </p>
 
         <h3 className="text-lg mt-3 font-semibold">
@@ -34,15 +34,6 @@ const index = () => {
           22 RUE DE LIBOURNE
           <br />
           33100 BORDEAUX FR
-        </p>
-
-        <h3 className="text-lg mt-3 font-semibold">Contenus</h3>
-        <p className="mt-2">
-          Nancy MARTIN
-          <br />
-          2, chemin de Lou Jouquet
-          <br />
-          33610 CESTAS FR
         </p>
 
         <h3 className="text-lg mt-3 font-semibold">Hébergeur du site</h3>
@@ -81,15 +72,14 @@ const index = () => {
         </p>
 
         <h3 className="text-lg mt-3 font-semibold">
-          Est-ce que Signature Promotion utilise des cookies sur son site ?
+          Est-ce que Terabois utilise des cookies sur son site ?
         </h3>
         <p className="mt-2">
-          Signature Promotion peut être amenée à utiliser des cookies sur ses
-          sites Internet afin d’améliorer les services et fonctionnalités
-          proposés à ses utilisateurs. Vous pouvez restreindre ou désactiver
-          l’utilisation des cookies via votre navigateur Internet, mais sans
-          cookies, vous pouvez ne pas être en mesure d’utiliser ce site
-          internet.
+          Terabois peut être amenée à utiliser des cookies sur ses sites
+          Internet afin d’améliorer les services et fonctionnalités proposés à
+          ses utilisateurs. Vous pouvez restreindre ou désactiver l’utilisation
+          des cookies via votre navigateur Internet, mais sans cookies, vous
+          pouvez ne pas être en mesure d’utiliser ce site internet.
         </p>
 
         <h4>Cookies strictement nécessaires</h4>
@@ -199,9 +189,8 @@ const index = () => {
         </ul>
         <h2 className="text-lg mt-3 font-semibold">Transmission des Données</h2>
         <p className="mt-2">
-          Les données collectées par Signature Promotion sont exploitées
-          uniquement à ses fins personnelles et ne font l'objet d'aucune
-          transmission extérieure.
+          Les données collectées par Terabois sont exploitées uniquement à ses
+          fins personnelles et ne font l'objet d'aucune transmission extérieure.
         </p>
         <h2 className="text-lg mt-3 font-semibold">Vos Droits</h2>
         <p className="mt-2">
@@ -213,9 +202,9 @@ const index = () => {
         </p>
         <h2 className="text-lg mt-3 font-semibold">Mesures de Sécurité</h2>
         <p className="mt-2">
-          Soucieuse de garantir la sécurité de vos données, Signature Promotion
-          prend toutes les précautions utiles pour préserver la sécurité des
-          données contre tout accès ou utilisation non autorisés, destruction
+          Soucieuse de garantir la sécurité de vos données, Terabois prend
+          toutes les précautions utiles pour préserver la sécurité des données
+          contre tout accès ou utilisation non autorisés, destruction
           accidentelle ou illégale, perte accidentelle ou altération. Ces
           mesures comprennent des dispositifs techniques comme des pare-feu, et
           des mesures organisationnelles telles qu'un système de sécurité
