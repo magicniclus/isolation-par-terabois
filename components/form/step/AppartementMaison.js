@@ -30,7 +30,7 @@ const AppartementMaison = () => {
   };
 
   return (
-    <div className="w-full lg:w-6/12 flex flex-col mb-10 lg:mb-3 ">
+    <div className="w-full lg:w-6/12 flex flex-col mb-10 lg:mb-3 px-6 lg:px-10">
       <h2
         className="text-2xl font-light lg:my-0 mt-5"
         style={{ color: "#3b82f6" }}
