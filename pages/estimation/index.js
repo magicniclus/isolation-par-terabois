@@ -18,8 +18,8 @@ const index = () => {
   return (
     <Basic
       height="min-h-[calc(100vh-78px)]"
-      title="Simulateur Prêt à Taux Zéro - Info PTZ | Étape par Étape vers Votre Estimation"
-      metaDescription="Utilisez notre simulateur interactif pour estimer facilement votre prêt à taux zéro. Chez Info PTZ, nous vous guidons à travers chaque étape pour une estimation précise et personnalisée. Commencez votre simulation maintenant et planifiez votre avenir financier avec confiance."
+      title="Simulateur d'aide pour l'isolationd e votre habitat - Étape par Étape vers Votre Estimation"
+      metaDescription="Utilisez notre simulateur interactif pour estimer facilement vos travaux d'isolation. Chez isolation-par-terabois, nous vous guidons à travers chaque étape pour une estimation précise et personnalisée. Commencez votre simulation maintenant et planifiez votre avenir financier avec confiance."
     >
       <ContainerEstimation>
         <div className=" flex flex-col justify-between  w-full lg:w-4/12">
